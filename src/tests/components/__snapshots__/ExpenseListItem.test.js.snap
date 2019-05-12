@@ -11,9 +11,9 @@ exports[`Should render ListItem 1`] = `
     </h3>
   </Link>
   <p>
-    100
-     - 
-    0
+    $100.000
+    -
+    31 December 1969
   </p>
 </div>
 `;
