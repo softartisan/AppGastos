@@ -5,7 +5,6 @@ ShallowWrapper {
   "length": 1,
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <EditExpensePage
-    editExpense={[MockFunction]}
     expense={
       Object {
         "amount": 4500,
@@ -20,6 +19,7 @@ ShallowWrapper {
         "push": [MockFunction],
       }
     }
+    startEditExpense={[MockFunction]}
     startRemoveExpense={[MockFunction]}
   />,
   Symbol(enzyme.__renderer__): Object {
