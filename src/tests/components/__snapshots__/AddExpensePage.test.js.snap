@@ -5,12 +5,12 @@ ShallowWrapper {
   "length": 1,
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <AddExpensePage
-    addExpense={[MockFunction]}
     history={
       Object {
         "push": [MockFunction],
       }
     }
+    startAddExpense={[MockFunction]}
   />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
