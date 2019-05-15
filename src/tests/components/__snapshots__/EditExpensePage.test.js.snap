@@ -20,7 +20,7 @@ ShallowWrapper {
         "push": [MockFunction],
       }
     }
-    removeExpense={[MockFunction]}
+    startRemoveExpense={[MockFunction]}
   />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
@@ -50,7 +50,7 @@ ShallowWrapper {
         <button
           onClick={[Function]}
         >
-          Remove
+          Eliminar
         </button>,
       ],
     },
@@ -79,11 +79,11 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "host",
         "props": Object {
-          "children": "Remove",
+          "children": "Eliminar",
           "onClick": [Function],
         },
         "ref": null,
-        "rendered": "Remove",
+        "rendered": "Eliminar",
         "type": "button",
       },
     ],
@@ -111,7 +111,7 @@ ShallowWrapper {
           <button
             onClick={[Function]}
           >
-            Remove
+            Eliminar
           </button>,
         ],
       },
@@ -140,11 +140,11 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "host",
           "props": Object {
-            "children": "Remove",
+            "children": "Eliminar",
             "onClick": [Function],
           },
           "ref": null,
-          "rendered": "Remove",
+          "rendered": "Eliminar",
           "type": "button",
         },
       ],
