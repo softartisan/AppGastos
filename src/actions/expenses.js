@@ -47,9 +47,35 @@ const editExpense = (id,updates) => ({
     updates
 });
 
+//SET_EXPENSES
+const setExpenses = (expenses) => {
+  return { type: 'SET_EXPENSES', expenses }
+}
+
+const startSetExpenses = () => {
+  //Retorno una función
+  return (dispatch) => {
+    //Saco expenses desde firebase y las guardo en expenses
+    //Retorno esta Promise
+    return database.ref('expenses').once('value').then((snapshot) => {
+
+      const expenses = [];
+      //Por cada objeto de firebase lleno un objeto del array expenses
+      snapshot.forEach((childSnapshot) => {
+        expenses.push( {id: childSnapshot.key, ...childSnapshot.val()} );
+      });
+
+      dispatch(setExpenses(expenses));
+
+    });
+  }
+}
+
 export {
     editExpense,
     removeExpense,
     addExpense,
-    startAddExpense
+    startAddExpense,
+    setExpenses,
+    startSetExpenses
 }
