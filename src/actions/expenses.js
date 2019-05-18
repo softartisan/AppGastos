@@ -8,7 +8,8 @@ const addExpense = (expense) => ({
 });
 
 const startAddExpense = (expenseData = {}) => {
-  return (dispatch) => {
+  return (dispatch, getState) => {
+    const uid = getState().auth.uid;
     const {
     description = '',
     note ='',
@@ -23,7 +24,7 @@ const startAddExpense = (expenseData = {}) => {
       createdAt
     }
 
-    return database.ref('expenses').push(expense).then((ref) => {
+    return database.ref(`users/${uid}/expenses`).push(expense).then((ref) => {
       dispatch(addExpense({
         id:ref.key,
         ...expense
@@ -43,8 +44,9 @@ const removeExpense = ({id} = {}) => ({
 
 const startRemoveExpense = ({id} = {}) => {
 
-  return (dispatch) => {
-    return database.ref(`expenses/${id}`).remove().then(() => {
+  return (dispatch, getState) => {
+    const uid = getState().auth.uid;
+    return database.ref(`users/${uid}/expenses/${id}`).remove().then(() => {
       dispatch(removeExpense({id}));
     })
   }
@@ -82,10 +84,11 @@ const setExpenses = (expenses) => {
 
 const startSetExpenses = () => {
   //Retorno una función
-  return (dispatch) => {
+  return (dispatch, getState) => {
+    const uid = getState().auth.uid;
     //Saco expenses desde firebase y las guardo en expenses
     //Retorno esta Promise
-    return database.ref('expenses').once('value').then((snapshot) => {
+    return database.ref(`users/${uid}/expenses`).once('value').then((snapshot) => {
 
       const expenses = [];
       //Por cada objeto de firebase lleno un objeto del array expenses
