@@ -13,7 +13,8 @@ class ExpenseForm extends React.Component {
             amount: props.expense ? (props.expense.amount).toString() : '',
             createdAt: props.expense ? moment(props.expense.createdAt) : moment(),
             calendarFocused: false,
-            error: ''
+            error: '',
+            isAdding: props.expense ? 'Editar Gasto' : 'Agregar Gasto'
         }
     }
     onDescriptionChange = (e) => {
@@ -40,7 +41,7 @@ class ExpenseForm extends React.Component {
     onSubmit = (e) => {
         e.preventDefault();
         if(!this.state.description || !this.state.amount){
-            this.setState(() => ({error: 'Please insert a valid description and amount'}));
+            this.setState(() => ({error: 'Ingresa un monto y descripción valida.'}));
         }else{
             this.setState(() => ({error: ''}));
             this.props.onSubmit({
@@ -66,7 +67,7 @@ class ExpenseForm extends React.Component {
                     <input
                         type='text'
                         value={this.state.amount}
-                        placeholder="Cantidad"
+                        placeholder="Monto (CLP)"
                         onChange={this.onAmountChange}
                     />
                     <SingleDatePicker
@@ -78,12 +79,12 @@ class ExpenseForm extends React.Component {
                         isOutsideRange={() => false}
                     />
                     <textarea
-                        placeholder="add a note for your expense (optional)"
+                        placeholder="Agrega una nota (opcional)"
                         value={this.state.note}
                         onChange={this.onNoteChange}
                     >
                     </textarea>
-                    <button>Add Expense</button>
+                    <button>{this.state.isAdding}</button>
                 </form>
             </div>
         );

@@ -67,8 +67,9 @@ const startEditExpense = (id, updates) => {
 //   'job/company': 'Amazon',
 //   'location/city': 'Seattle'
 // });
-  return (dispatch) => {
-    return database.ref(`expenses/${id}`).update({
+  return (dispatch, getState) => {
+    const uid = getState().auth.uid;
+    return database.ref(`users/${uid}/expenses/${id}`).update({
       ...updates
     }).then(() => {
       dispatch(editExpense(id, updates));
