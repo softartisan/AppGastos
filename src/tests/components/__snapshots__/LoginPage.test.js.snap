@@ -17,9 +17,24 @@ ShallowWrapper {
     "key": undefined,
     "nodeType": "host",
     "props": Object {
-      "children": <button>
-        Login
-      </button>,
+      "children": <div
+        className="box-layout__box"
+      >
+        <h1
+          className="box-layout__title"
+        >
+          Gastos App
+        </h1>
+        <p>
+          Es tiempo de que controles tus gastos.
+        </p>
+        <button
+          className="button"
+        >
+          Iniciar sesión con Google
+        </button>
+      </div>,
+      "className": "box-layout",
     },
     "ref": null,
     "rendered": Object {
@@ -27,12 +42,63 @@ ShallowWrapper {
       "key": undefined,
       "nodeType": "host",
       "props": Object {
-        "children": "Login",
-        "onClick": undefined,
+        "children": Array [
+          <h1
+            className="box-layout__title"
+          >
+            Gastos App
+          </h1>,
+          <p>
+            Es tiempo de que controles tus gastos.
+          </p>,
+          <button
+            className="button"
+          >
+            Iniciar sesión con Google
+          </button>,
+        ],
+        "className": "box-layout__box",
       },
       "ref": null,
-      "rendered": "Login",
-      "type": "button",
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "Gastos App",
+            "className": "box-layout__title",
+          },
+          "ref": null,
+          "rendered": "Gastos App",
+          "type": "h1",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "Es tiempo de que controles tus gastos.",
+          },
+          "ref": null,
+          "rendered": "Es tiempo de que controles tus gastos.",
+          "type": "p",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "Iniciar sesión con Google",
+            "className": "button",
+            "onClick": undefined,
+          },
+          "ref": null,
+          "rendered": "Iniciar sesión con Google",
+          "type": "button",
+        },
+      ],
+      "type": "div",
     },
     "type": "div",
   },
@@ -42,9 +108,24 @@ ShallowWrapper {
       "key": undefined,
       "nodeType": "host",
       "props": Object {
-        "children": <button>
-          Login
-        </button>,
+        "children": <div
+          className="box-layout__box"
+        >
+          <h1
+            className="box-layout__title"
+          >
+            Gastos App
+          </h1>
+          <p>
+            Es tiempo de que controles tus gastos.
+          </p>
+          <button
+            className="button"
+          >
+            Iniciar sesión con Google
+          </button>
+        </div>,
+        "className": "box-layout",
       },
       "ref": null,
       "rendered": Object {
@@ -52,12 +133,63 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "host",
         "props": Object {
-          "children": "Login",
-          "onClick": undefined,
+          "children": Array [
+            <h1
+              className="box-layout__title"
+            >
+              Gastos App
+            </h1>,
+            <p>
+              Es tiempo de que controles tus gastos.
+            </p>,
+            <button
+              className="button"
+            >
+              Iniciar sesión con Google
+            </button>,
+          ],
+          "className": "box-layout__box",
         },
         "ref": null,
-        "rendered": "Login",
-        "type": "button",
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "Gastos App",
+              "className": "box-layout__title",
+            },
+            "ref": null,
+            "rendered": "Gastos App",
+            "type": "h1",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "Es tiempo de que controles tus gastos.",
+            },
+            "ref": null,
+            "rendered": "Es tiempo de que controles tus gastos.",
+            "type": "p",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "Iniciar sesión con Google",
+              "className": "button",
+              "onClick": undefined,
+            },
+            "ref": null,
+            "rendered": "Iniciar sesión con Google",
+            "type": "button",
+          },
+        ],
+        "type": "div",
       },
       "type": "div",
     },

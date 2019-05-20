@@ -10,6 +10,7 @@ import './styles/styles.scss';
 import 'react-dates/lib/css/_datepicker.css';
 import {firebase} from './firebase/firebase';
 import './playground/promises';
+import LoadingPage from './components/LoadingPage';
 
 
 const store = configureStore();
@@ -21,6 +22,7 @@ const jsx = (
 )
 
 let hasRenderer = false;
+
 const render = () => {
   if(!hasRenderer){
     ReactDOM.render(jsx, document.querySelector('#app'));
@@ -28,11 +30,7 @@ const render = () => {
   }
 }
 
-ReactDOM.render(<p>Cargando...</p>,document.querySelector('#app'));
-
-store.dispatch(startSetExpenses()).then(() => {
-  ReactDOM.render(jsx, document.querySelector('#app'));
-});
+ReactDOM.render(<LoadingPage/>,document.querySelector('#app'));
 
 firebase.auth().onAuthStateChanged((user) => {
   if(user){
